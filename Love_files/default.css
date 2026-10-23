@@ -1,0 +1,315 @@
+body {
+	margin: 0;
+	padding: 0;
+	
+	background:
+	linear-gradient(
+	to bottom,
+	#f4f8fc 0%,
+	#e6f0f8 45%,
+	#d5e6f2 100%
+	);
+	background-attachment: fixed;
+	font-size: 20px;
+	font-family: '微软雅黑', '宋体', sans-serif;
+	color: #803746;
+	overflow: auto
+}
+
+a {
+	color: #ffffff;
+	font-size: 14px;
+}
+
+#main {
+	width: 100%;
+}
+
+#wrap {
+	position: relative;
+	margin: 0 auto;
+	width: 1100px;
+	height: 680px;
+	margin-top: 100px;
+}
+
+#text {
+	width: 400px;
+	height: 425px;
+	left: 60px;
+	top: 80px;
+	position: absolute;
+}
+
+#code {
+	display: none;
+	font-size: 30px;
+}
+
+#canvas {
+
+	margin:0 auto;
+
+	width:1100px;
+	height:680px;
+
+	filter:
+	drop-shadow(0 0 20px rgba(205,55,80,0.35))
+	drop-shadow(0 0 50px rgba(205,55,80,0.2))
+	drop-shadow(0 0 80px rgba(205,55,80,0.15));
+
+}
+
+#error {
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 60px;
+	display: none;
+}
+
+.hand {
+	cursor: pointer;
+}
+
+.say {
+	margin-left: 5px;
+}
+
+.space {
+	margin-right: 150px;
+}
+/* PETALOS */
+
+.petals{
+  position:fixed;
+
+  width:100%;
+  height:100%;
+
+  top:0;
+  left:0;
+
+  pointer-events:none;
+
+  overflow:hidden;
+
+  z-index:0;
+}
+
+/* CADA PETALO */
+
+.petals span{
+  position:absolute;
+
+  display:block;
+
+  width:35px;
+  height:35px;
+
+  background:
+  radial-gradient(
+    circle at top,
+    #ffe7ec,
+    #e5a0ad
+  );
+
+  border-radius:
+  70% 0 70% 0;
+
+  opacity:0.95;
+
+  filter:
+  blur(0.3px);
+
+  animation:
+  fall linear infinite;
+}
+
+/* POSICIONES */
+
+.petals span:nth-child(1){
+  left:5%;
+  animation-duration:12s;
+  animation-delay:0s;
+}
+
+.petals span:nth-child(2){
+  left:18%;
+  animation-duration:16s;
+  animation-delay:3s;
+}
+
+.petals span:nth-child(3){
+  left:32%;
+  animation-duration:14s;
+  animation-delay:1s;
+}
+
+.petals span:nth-child(4){
+  left:48%;
+  animation-duration:18s;
+  animation-delay:5s;
+}
+
+.petals span:nth-child(5){
+  left:63%;
+  animation-duration:13s;
+  animation-delay:2s;
+}
+
+.petals span:nth-child(6){
+  left:77%;
+  animation-duration:17s;
+  animation-delay:4s;
+}
+
+.petals span:nth-child(7){
+  left:88%;
+  animation-duration:15s;
+  animation-delay:1s;
+}
+
+.petals span:nth-child(8){
+  left:95%;
+  animation-duration:20s;
+  animation-delay:6s;
+}
+
+/* ANIMACION */
+
+@keyframes fall{
+
+  0%{
+    transform:
+    translateY(-120px)
+    rotate(0deg);
+
+    opacity:0;
+  }
+
+  10%{
+    opacity:0.8;
+  }
+
+  100%{
+    transform:
+    translateY(120vh)
+    rotate(360deg);
+
+    opacity:0;
+  }
+
+}
+/* ESTRELLAS */
+
+.stars{
+  position:fixed;
+
+  width:100%;
+  height:100%;
+
+  top:0;
+  left:0;
+
+  pointer-events:none;
+
+  z-index:0;
+}
+
+/* CADA ESTRELLA */
+
+.stars span{
+  position:absolute;
+
+  width:6px;
+  height:6px;
+
+  background:#ffffff;
+
+  border-radius:50%;
+
+  box-shadow:
+  0 0 10px white,
+  0 0 20px white,
+  0 0 30px #b8d0ff;
+
+  animation:
+  twinkle 3s infinite ease-in-out;
+}
+
+/* POSICIONES */
+
+.stars span:nth-child(1){
+  top:10%;
+  left:15%;
+  animation-delay:0s;
+}
+
+.stars span:nth-child(2){
+  top:20%;
+  left:40%;
+  animation-delay:1s;
+}
+
+.stars span:nth-child(3){
+  top:15%;
+  left:70%;
+  animation-delay:2s;
+}
+
+.stars span:nth-child(4){
+  top:30%;
+  left:85%;
+  animation-delay:1.5s;
+}
+
+.stars span:nth-child(5){
+  top:45%;
+  left:20%;
+  animation-delay:0.5s;
+}
+
+.stars span:nth-child(6){
+  top:60%;
+  left:50%;
+  animation-delay:2.5s;
+}
+
+.stars span:nth-child(7){
+  top:75%;
+  left:75%;
+  animation-delay:1s;
+}
+
+.stars span:nth-child(8){
+  top:80%;
+  left:35%;
+  animation-delay:3s;
+}
+
+.stars span:nth-child(9){
+  top:50%;
+  left:90%;
+  animation-delay:2s;
+}
+
+.stars span:nth-child(10){
+  top:8%;
+  left:55%;
+  animation-delay:1.2s;
+}
+
+/* BRILLO */
+
+@keyframes twinkle{
+
+  0%,100%{
+    opacity:0.3;
+    transform:scale(1);
+  }
+
+  50%{
+    opacity:1;
+    transform:scale(1.8);
+  }
+}
